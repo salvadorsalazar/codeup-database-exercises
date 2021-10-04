@@ -15,3 +15,4 @@ CREATE TABLE IF NOT EXISTS albums(
 );
 
 select * from albums;
+select * from books;

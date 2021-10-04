@@ -19,8 +19,8 @@ Select * FROM albums;
 select name AS 'Pink floyd albums'
 from albums where artist='Pink Floyd';
 
-#         select name from albums
-#         where artist='Pink Floyd';
+        select name from albums
+        where artist='Pink Floyd';
 
 select  release_date as 'Sgt. Pepper''s Lonely Hearts Club Band Release Date'
 from albums where name='Sgt. Pepper''s Lonely Hearts Club Band';

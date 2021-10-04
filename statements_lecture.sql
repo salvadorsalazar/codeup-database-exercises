@@ -137,6 +137,7 @@ select 'migrating albums table ' as Migrations;
 -- ================================= UPDATE STATEMENTS (UPDATE)
 
 -- create books database (if it doesn't exit)
+# use codeup_test_db;
 
 CREATE DATABASE IF NOT EXISTS books_db;
 
@@ -165,15 +166,19 @@ CREATE TABLE IF NOT EXISTS books (
 
 
 -- Create books seeder file
+INSERT INTO books (title,author,date_published,description,bestseller_weeks) VALUES
 
--- "To Kill a Mockingbird", "Harper Lee", "1960-07-11", "This is a book about birds.", 0
--- "The Great Gatsby", "F. Scott Fitzgerald", "1925-04-10", "This is a book about a great thing.", 10
--- "Harry Potter and the Sorcerer`s Stone", "J.K. Rowling", "1997-06-26", "This is a book about wizards.", 70
--- "The Hobbit", "J.R.R. Tolkien", "1937-07-21", "This is a book about hobbits.", 5
+('To Kill a Mockingbird', 'Harper Lee', '1960-07-11', 'This is a book about birds.', 0);
+#  ("The Great Gatsby", "F. Scott Fitzgerald", "1925-04-10", "This is a book about a great thing.", 10)
+#  ("Harry Potter and the Sorcerer`s Stone", "J.K. Rowling", "1997-06-26", "This is a book about wizards.", 70)
+#  ("The Hobbit", "J.R.R. Tolkien", "1937-07-21", "This is a book about hobbits.", 5);
 
 -- Update values **Test alterations first with SELECT statements**
 -- Updating a single record
--- (a record with an ID of 2 should have an author of 'bob')
+-- (a record with an ID of 2 should have an author of 'bob');
+
+SELECT * FROM books;
+
 
 SELECT * FROM books
 WHERE id = 2;
@@ -233,7 +238,10 @@ WHERE id = 4\G
 
 
 DELETE FROM books
-WHERE id = 4\G
+WHERE id = 4\G;
 
 
 
+# Truncate
+# be really carefull
+truncate table books;
